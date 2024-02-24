@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Exports</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- swiper css link -->
+
+    <link rel="stylesheet" href="contactus.css">
+
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script>
+        jQuery(function($){
+            var $navbar = $('.header');
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if( $current > 0 ){
+                    $navbar.addClass('navbar-color');
+                }
+                else{
+                    $navbar.removeClass('navbar-color');
+                }
+            });
+        });
+    </script>
+    <!-- JQuery CDN -->
+
+</head>
+<body class="body">
+    <div onclick="scrollToTop()" class="bttb">
+        <img src="./img/icons8-down-button-100.png" alt="">
+    </div>
+    <!-- ***************HEADER SECTION STARTS*************** -->
+    <header class="header">
+
+        <a href="#" class="logo"></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="aboutus.html">about us</a>
+            <a href="ballpens.html">ball pens</a>
+            <a href="minerals.html">minerals</a>
+            <a href="safetymatches.html">safety matches</a>
+            <a href="biscuits.html">biscuits</a>
+            <a href="wickstoves.html">wick stoves</a>
+            <a href="holograms.html">hologram stickers</a>
+            <a href="#">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <!-- <div class="fas fa-search" id="search-btn"></div> -->
+        </div>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+    <!-- ***************HEADER SECTION ENDS*************** -->
+
+    <!-- *****************BODY***************** -->
+
+    <div class="container">
+        <!-- <span class="big-circle"></span>
+        <img src="img/shape.png" class="square" alt="" /> -->
+        <div class="form">
+          <div class="contact-info">
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">
+                Get in touch with us anytime to Get the Best QUOTES. <br> Describe Your Requirements in Detail Like: <br>- What Are You Looking For <br>- Features / Specifications <br>- Application / Usage <br>- Minimum Order Quantity, etc.
+            </p>
+  
+            <div class="info">
+              <div class="information">
+                <img src="img/location.png" class="icon" alt="" />
+                <p>F-14, HI LIFE MALL, SANTACRUZ (WEST) <br> MUMBAI (400 054), INDIA</p>
+              </div>
+              <div class="information">
+                <img src="img/email.png" class="icon" alt="" />
+                <p style="text-transform: none;">info@sunriseexports.biz</p>
+              </div>
+              <div class="information">
+                <img src="img/phone-call.png" class="icon" alt="" />
+                <p>+91 9819201633<br>+91 9819163180</p>
+              </div>
+            </div>
+  
+            <div class="social-media">
+              <p>Connect with us on LinkedIn :</p>
+              <div class="social-icons">
+                <a href="https://in.linkedin.com/company/sunrise-exports" target="_blank">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="contact-form">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+  
+            <form action="index.html" autocomplete="off">
+              <h3 class="title">Contact us</h3>
+              <div class="input-container">
+                <input type="text" name="name" class="input" />
+                <label for="">Your Name</label>
+                <span>Your Name</span>
+              </div>
+              <div class="input-container">
+                <input type="email" name="email" class="input" />
+                <label for="">Your Email</label>
+                <span>Your Email</span>
+              </div>
+              <div class="input-container">
+                <input type="tel" name="phone" class="input" />
+                <label for="">Phone Number</label>
+                <span>Phone Number</span>
+              </div>
+              <div class="input-container textarea">
+                <textarea name="message" class="input"></textarea>
+                <label for="">Your Query</label>
+                <span>Your Query</span>
+              </div>
+              <input type="submit" value="Send" class="btn" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <section class="location">
+        <h1>Google Map</h1>
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.4397290468332!2d72.83929661437702!3d19.08835575654552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9af39213dcb%3A0xfcb24bae717988d8!2sSunrise%20Exports!5e0!3m2!1sen!2sin!4v1675503672420!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    <!-- *****************BODY***************** -->
+
+    <div class="loader">
+        <img src="./gif/1490.gif" alt="">
+    </div>
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- swiper js link -->
+
+
+
+    <!-- *******************CUSTOM JS FILE******************** -->
+    <script src="contactus.js"></script>
+    <!-- *******************CUSTOM JS FILE******************** -->
+</body>

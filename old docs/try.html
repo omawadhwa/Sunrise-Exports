@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Exports</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- swiper css link -->
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+*{
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#ff660000;
+    background: url(./img/bruno-martins-ElUbmfsgvV0-unsplash.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+}
+body::-webkit-scrollbar {
+    width: 1em;
+    background-color: rgb(0, 0, 0);
+}
+ 
+body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgb(255, 255, 255); */
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 94, 0);
+  outline: 1px solid rgb(255, 94, 0);
+}
+
+section{
+    padding: 2rem 7%;
+   
+}
+.bttb{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.493); */
+    cursor: pointer;
+    color: white;
+}
+.bttb img{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    height: 70px;
+    width: 70px;
+    
+}
+.bttb:hover{
+    background: rgb(0, 0, 0);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.493);
+}
+
+
+
+.header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.7%;
+    background-color: rgba(255, 255, 255, 0);
+    /* box-shadow: 4px 4px 40px rgb(0, 0, 0); */
+}
+
+.navbar-color{
+    background: rgb(0, 0, 0);
+    width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.header .logo {
+    background-image: url(./img/Picture1.jpg);
+    background-repeat: no-repeat;
+    background-size: 170px;
+    width: 170px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+.header .logo:hover{
+    box-shadow: 2px 2px 40px rgb(255, 255, 255);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1.4rem;
+    color: #ffffff;
+}
+
+.header .navbar a:hover{
+    /* color: rgb(0, 29, 126); */
+    background: rgb(255, 255, 255);
+    padding: 2rem;
+    border-radius: 50px;
+    text-shadow: 2px 2px 40px rgb(0, 0, 0);
+    color: #000000;
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #ffd900;
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-right: .3rem;
+    text-align: center;
+}
+.header .icons div:hover{
+    background: rgb(255, 94, 0);
+    color: white;
+    box-shadow: 2px 2px 20px black;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 100%; right:-110%;
+    width: 50rem;
+    height:5rem;
+    background: rgb(0, 0, 0);
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 20px rgb(255, 255, 255);
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+.header .search-form input{
+    height: 100%;
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: rgb(255, 255, 255);
+    padding:0 1.5rem ;
+}
+
+.header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color: black;
+    cursor: pointer;
+}
+
+.header .search-form label:hover{
+    color: orangered;
+     
+}
+
+/* .home{
+    padding-top: 105px;
+    }
+
+.home .slide{
+    display: flex;
+    align-items: center;
+    height: 60rem;
+    background-size:cover !important;
+    background-position: center !important;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 0, 0);
+    transition: 0.5s ease-in-out;
+    
+}
+.home .slide:hover{
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(247, 247, 247);
+}
+
+
+.home .content{
+    width: 80rem;
+    padding: 1rem 10rem;
+}
+
+.home .content h3{
+    font-size: 9rem;
+    color: rgb(255, 123, 0);
+}
+
+.home .content p{
+    font-size: 1.8rem;
+    color: rgb(255, 0, 0);
+    padding: 3rem 0;
+}
+
+.swiper-slide-active{
+    background: rgb(0, 6, 95);
+
+} */
+.home{
+    min-height: 120vh;
+    display: flex;
+    align-items: center;
+    /* background: url(./img/5.jpg) no-repeat fixed; */
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0px -50px 100px rgb(0, 0, 0) inset,0px 50px 250px rgba(255, 255, 255, 0.432); */
+}
+.home .content{
+    max-width: 120rem;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.562); */
+    border-radius: 100px;
+    /* box-shadow: 50px 50px 100px rgba(255, 238, 0, 0.664), -50px 0px 100px rgba(255, 238, 0, 0.664); */
+}
+.home .content h3{
+    font-size: 10rem;
+    text-transform: uppercase;
+    color:#000000;
+    align-items: center;
+    /* text-shadow: 10px 10px 20px #ffffff; */
+    transition: 0.5s ease-in-out;
+    animation: color infinite;
+}
+
+.home .content h3:hover{
+    font-size: 11rem;
+    background: rgba(255, 255, 255, 0.116);
+    border-radius: 100px;
+    color: #000000;
+    cursor: default;
+}
+.home .content p{
+    align-items: center;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 2.5;
+    padding: 1rem 0;
+    color:rgb(255, 255, 255);
+    margin-bottom: 8rem;
+    margin-top: 2rem;
+    text-shadow: 10px 10px 20px #000000;
+    transition: 0.5s ease-in-out;
+}
+.home .content .btn{
+    
+    font-size: 3.5rem;
+    padding: 2rem;
+    color: #000000;
+    background: rgba(255, 255, 255);
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.home .content .btn:hover{
+    /* box-shadow: 10px 20px 0px rgb(255, 255, 255) inset,-10px -20px 0px rgb(255, 255, 255) inset,10px 10px 50px black, -10px -10px 50px black ; */
+    cursor:pointer;
+    color: #000000;
+    box-shadow: 10px 10px 50px rgb(0, 0, 0),-10px -10px 50px rgb(0, 0, 0);
+    background: rgb(255, 230, 0);
+}
+.home .content .btn a:visited{
+    text-decoration: none;
+    color: #000000;
+}
+.about .row{
+display: flex;
+flex-wrap: wrap;
+gap: 2.5rem;
+text-align: center;
+margin-bottom: 10rem;
+}
+.about .row .image{
+    flex: 1 1 40rem;
+    
+}
+
+.about .row .image h1{
+    color: white;
+}
+.about .row .image img{
+    width: 30rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px 50px black;
+}
+.about .row .image img:hover{
+    width: 32rem;
+    box-shadow: 10px 10px 50px white,-10px -10px 50px white ;
+    
+}
+.about .row .content{
+    flex: 1 1 40rem;
+    background: rgba(255, 255, 255, 0.274);
+    border-radius: 20px;
+}
+.about .row .content span{
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    border-bottom: 3px dotted black;
+}
+.about .row .content h3{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+}
+.about .row .content p{
+    line-height: 2;
+    font-weight: normal;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    color: black;
+    
+}
+
+
+.home-products h1{
+    margin-top: -10rem;
+    text-align: center;
+     font-size:3rem;
+      color: rgb(0, 0, 0);
+       border-bottom: 2px dotted black;
+       text-transform: capitalize;
+       margin-bottom: 2rem;
+}
+
+.home-products .slide{
+    text-align: center;
+    position: relative;
+    width: 30rem;
+    background-color: #ffffff70;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10rem;
+    transition: 1s ease-in-out;
+}
+.home-products .slide:hover{
+    background-color: rgb(0, 0, 0);
+    width: 35rem;
+    cursor: pointer;
+}
+.home-products .slide .image{
+    align-items: center;
+    padding: 2rem;
+    
+}
+.home-products .slide .image img{
+    width: 33rem;
+    height: 33rem;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    
+}
+.home-products .slide .image h3{
+    color: black;
+    font-size: 2.5rem;
+}
+.home-products .slide .content{
+    position: absolute;
+    height: 20rem;
+    bottom: 0%; right: 0; left: 0;
+    background: #000000; 
+    padding: 2rem 3rem;
+    /* display: none; */
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.home-products .slide .content:hover{
+    /* display: block; */
+    bottom: 0;
+    opacity: 1;
+}
+.home-products .slide .content h3{
+    font-size: 2rem;
+    color: #ffffff;
+}
+.home-products .slide .content p{
+    padding: 2.5rem 0;
+    font-size: 1.7rem;
+    font-weight: lighter;
+    color: #ffffff;
+}
+.home-products .slide .content .btn{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50px;
+}
+.home-products .slide .content .btn:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 251, 0);
+    box-shadow:0px 0px 20px white,-0px -0px 20px white ;
+}
+.footer{
+    background: rgba(255, 255, 255, 0.568);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+}
+.footer h1{
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+}
+.footer .info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.footer .info .information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.footer .info .information img{
+    width: 30px;
+    height: 30px;
+    margin-right: 2rem;
+}
+.footer .info .information p{
+    font-size: 1.5rem;
+}
+.footer .info .information .btn{
+    font-size: 2rem;
+    background: #ffd900;
+    border-radius: 50px;
+    padding: 2rem;
+}
+.footer .info .information a:visited{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.footer .info .information .btn:hover{
+    background: rgb(255, 94, 0);
+    color: white;
+    cursor: pointer;
+}
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;left: 0;right: 0;bottom: 0;
+    z-index: 1000;
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeOut 3.5s;
+    
+}
+@keyframes fadeOut {
+    50% {opacity:1;}
+    100% {opacity:0;}
+}
+.loader img{
+    height: 10rem;
+}
+    
+
+
+        
+
+
+
+
+
+/* ********************MEDIA QUERIES********************* */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+
+    
+}
+
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .search-form{
+        width: 90%;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        box-shadow: 4px 4px 40px black;
+        border-radius: 2rem;
+        background-color:#000000;
+    }
+
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        color: rgb(255, 255, 255);
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+    .header.navbar a:hover{
+        background: white;
+        border-radius: 2rem;
+        padding: 1rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 8rem;
+    }
+    .home .content p{
+        font-size: 2rem;
+    }
+
+    
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+        
+    }
+}
+
+    </style>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script>
+        jQuery(function($){
+            var $navbar = $('.header');
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if( $current > 0 ){
+                    $navbar.addClass('navbar-color');
+                }
+                else{
+                    $navbar.removeClass('navbar-color');
+                }
+            });
+        });
+    </script>
+    <!-- JQuery CDN -->
+
+</head>
+<body class="body">
+    <div onclick="scrollToTop()" class="bttb">
+        <img src="./img/icons8-down-button-100.png" alt="">
+    </div>
+    <!-- ***************HEADER SECTION STARTS*************** -->
+    <header class="header">
+
+        <a href="#" class="logo"></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="aboutus.html">about us</a>
+            <a href="ballpens.html">ball pens</a>
+            <a href="minerals.html">minerals</a>
+            <a href="safetymatches.html">safety matches</a>
+            <a href="biscuits.html">biscuits</a>
+            <a href="wickstoves.html">wick stoves</a>
+            <a href="holograms.html">hologram stickers</a>
+            <a href="contactus.html">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input class="search w-full h-12 bg-white p-4 outline-none rounded-md mb-6" type="search" id="search-box" placeholder="search here">
+            <div class="options w-full h-auto rounded-md overflow-hidden"></div>
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+    </header>
+    <!-- ***************HEADER SECTION ENDS*************** -->
+
+    <!-- *************HOME SECTION BEGINS************* -->
+    <section class="home">
+        <div class="content">
+            <h3>Sunrise Exports</h3>
+            <p>We are renowned as the premier manufacturer, exporter and supplier of Safety Matchsticks, Ballpens, Ballpen Refills, Minerals, Biscuits, Hologram Stickers and Stationery Products. Our quality proven products are extremely functional which have acquired a strong hold in the international market.</p>
+            
+            <!-- <a href="#" class="btn"><img src="./img/icons8-down-button-100 (2).png" alt=""></a> -->
+            <span class="btn">
+                <a href="contactus.html">
+                    Get A Quote
+                </a>
+            </span>
+        </div>
+        <!-- <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <section class="swiper-slide slide" style="background: url(./img/Untitled\ design\ \(8\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>WE ARE THE BEST</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem fugit inventore, nam suscipit delectus explicabo officiis qui fuga odio aperiam, ipsam perspiciatis quos iusto excepturi facilis ad accusantium reprehenderit quas?</p>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(./img/Untitled\ design\ \(7\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>WE ARE THE BEST</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem fugit inventore, nam suscipit delectus explicabo officiis qui fuga odio aperiam, ipsam perspiciatis quos iusto excepturi facilis ad accusantium reprehenderit quas?</p>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(./img/Untitled\ design\ \(6\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>WE ARE THE BEST</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem fugit inventore, nam suscipit delectus explicabo officiis qui fuga odio aperiam, ipsam perspiciatis quos iusto excepturi facilis ad accusantium reprehenderit quas?</p>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(./img/Untitled\ design\ \(5\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>WE ARE THE BEST</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem fugit inventore, nam suscipit delectus explicabo officiis qui fuga odio aperiam, ipsam perspiciatis quos iusto excepturi facilis ad accusantium reprehenderit quas?</p>
+                    </div>
+                </section>
+
+                <section class="swiper-slide slide" style="background: url(./img/Untitled\ design\ \(9\).jpg) no-repeat;">
+                    <div class="content">
+                        <h3>WE ARE THE BEST</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatem fugit inventore, nam suscipit delectus explicabo officiis qui fuga odio aperiam, ipsam perspiciatis quos iusto excepturi facilis ad accusantium reprehenderit quas?</p>
+                    </div>
+                </section>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div> -->
+
+    </section>
+
+    
+    <!-- <section class="about" id="about">
+        <div class="container">
+                <div class="content">
+
+                    <h3>We have more than 20 years of experiences
+                        in Making Products
+                    </h3>
+                    <p>Incorporated in 2000 by Mr. Kishore Chandni, Sunrise Exports is one of the leading manufacturers exporters and suppliers of all types of Ball pens, Direct fill pens , Fine tip pens, Designer pens, Gel pens, Hologram Stickers, all types of Kerosene wick stoves, mining products like Talc power/Soapstone powder, Dolomite powder, Calcite powder, China clay powder, Quartz silica powder, all types of matchboxes like Cardboard Matchbox , Wax Matchbox, Kitchen Matchbox.</p>
+                </div>
+            <div class="image">
+                <img src="./img/IMG-20220716-WA0013.jpg" alt="">
+                <h3>Mr. Kishore Chandni</h3>
+            </div>
+                
+        </div>
+
+    </section> -->
+
+    <section class="home-products">
+        <h1>Our Products</h1>
+        <div class="swiper home-products-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./img/ballpens/5SUNRISE  EXPORTS BALLPENS PPT.jpg">
+                        <h3>Ball Pens</h3>
+                    </div>
+                    <div class="content">
+                        <h3>Ball Pens</h3>
+                        <p>Providing you the best range of Ball Point Pens and Ball Pens.</p>
+                        <a href="ballpens.html" class="btn">read more</a>
+
+                    </div>
+                </div>
+                    <div class="swiper-slide slide">
+                        <div class="image">
+                            <img src="./img/Hologram.jpg">
+                            <h3>Hologram Stickers</h3>
+                        </div>
+                        <div class="content">
+                            <h3>Hologram Stickers</h3>
+                            <p>Offering extensive range of Hologram Stickers to our Clients.</p>
+                            <a href="holograms.html" class="btn">read more</a>
+                            
+                        </div>
+                    </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./img/Matches.jpg">
+                        <h3>Safety Matchsticks</h3>
+                    </div>
+                    <div class="content">
+                        <h3>Safety Matchsticks</h3>
+                        <p>Our matchbox are of high grade and they do not spark or flame at the time of burning.</p>
+                        <a href="safetymatches.html" class="btn">read more</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./img/Stove.jpg">
+                        <h3>Kerosene Wick Stoves</h3>
+                    </div>
+                    <div class="content">
+                        <h3>Kerosene Wick Stoves</h3>
+                        <p>We introduce ourself as manufacturers & exporters of kerosene wick stoves.</p>
+                        <a href="wickstoves.html" class="btn">read more</a>
+
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="./img/Minerals.jpg">
+                        <h3>Minerals</h3>
+                    </div>
+                    <div class="content">
+                        <h3>Minerals</h3>
+                        <p>Sunrise Export (India) offers supreme quality Minerals to our Clients.</p>
+                        <a href="minerals.html" class="btn">read more</a>
+
+                    </div>
+                </div>
+            <div class="swiper-slide slide">
+                <div class="image">
+                    <img src="./img/Biscuits/Picture9.jpg">
+                    <h3>Biscuits</h3>
+                </div>
+                <div class="content">
+                    <h3>Biscuits</h3>
+                    <p>We introduce ourself as manufacturers & exporters of Glucose, Cream and Nice Biscuits.</p>
+                    <a href="biscuits.html" class="btn">read more</a>
+
+                </div>
+            </div>
+                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="./img/IMG-20220716-WA0013.jpg" alt="">
+                <h1 style="font-size: 2rem; font-weight: lighter;"><strong>Mr. Kishore Chandni</strong><br>( Founder & CEO - Sunrise Exports & Sneras International )</h1>
+            </div>
+            <div class="content">
+                <span>About Us</span>
+                <h3>We have more than <strong style="color: black;"> 20 years </strong>of experience
+                    in Making Products</h3>
+                    <p>Incorporated in 2000 by Mr. Kishore Chandni, Sunrise Exports is one of the leading manufacturer exporters and suppliers of all types of Ball pens, Direct fill pens , Fine tip pens, Designer pens, Gel pens, Hologram Stickers, all types of Kerosene wick stoves, mining products like Talc power/Soapstone powder, Dolomite powder, Calcite powder, China clay powder, Quartz silica powder, all types of matchboxes like Cardboard Matchbox , Wax Matchbox, Kitchen Matchbox.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- *************HOME SECTION ENDS************* -->
+
+    <!-- ***************FOOTER SECTION STARTS*************** -->
+    <section class="footer">
+       <h1>Contact Us</h1>
+       <div class="info">
+            <div class="information">
+              <img src="img/location.png" class="icon" alt="" />
+              <p>F-14, HI LIFE MALL, SANTACRUZ (WEST) <br> MUMBAI (400 054), INDIA</p>
+            </div>
+            <div class="information">
+              <img src="img/email.png" class="icon" alt="" />
+              <p style="text-transform: none;">info@sunriseexports.biz</p>
+            </div>
+            <div class="information">
+              <img src="img/phone-call.png" class="icon" alt="" />
+              <p>+91 9819201633<br>+91 9819163180</p>
+            </div>
+            <div class="information">
+                <div class="btn">
+                    <a href="contactus.html">
+                        Get A Quote
+                    </a>
+                </div>
+            </div>
+          </div>
+    </section>
+    <!-- ***************FOOTER SECTION ENDS*************** -->
+
+    <!-- <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/MEiZ5h8lOkM7rwideE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/looping-infinite-loop-cmdrkitten-MEiZ5h8lOkM7rwideE">via GIPHY</a></p> -->
+    <div class="loader">
+        <img src="./gif/1490.gif" alt="">
+    </div>
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- swiper js link -->
+
+
+
+    <!-- *******************CUSTOM JS FILE******************** -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        //search bar
+
+let searchForm = document.querySelector('.search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+    searchForm.classList.toggle('active');
+    navbar.classList.remove('active');
+    
+}
+
+// //search bar data
+// const options = [
+//   {
+//     name: "Daltfresh",
+//     url: "http://tripadvisor.com",
+//   },
+//   {
+//     name: "Zamit",
+//     url: "https://delicious.com",
+//   },
+//   {
+//     name: "Lotlux",
+//     url: "https://soundcloud.com",
+//   },
+//   {
+//     name: "Tresom",
+//     url: "https://earthlink.net",
+//   },
+//   {
+//     name: "Holdlamis",
+//     url: "https://drupal.org",
+//   },
+//   {
+//     name: "Sonsing",
+//     url: "https://pinterest.com",
+//   },
+//   {
+//     name: "Rank",
+//     url: "https://mapy.cz",
+//   },
+//   {
+//     name: "Namfix",
+//     url: "https://businesswire.com",
+//   },
+//   {
+//     name: "Fix San",
+//     url: "http://ocn.ne.jp",
+//   },
+//   {
+//     name: "Biodex",
+//     url: "https://symantec.com",
+//   },
+//   {
+//     name: "Stringtough",
+//     url: "https://blogs.com",
+//   },
+//   {
+//     name: "Vagram",
+//     url: "http://tripadvisor.com",
+//   },
+//   {
+//     name: "Konklux",
+//     url: "https://intel.com",
+//   },
+//   {
+//     name: "Pannier",
+//     url: "https://cyberchimps.com",
+//   },
+//   {
+//     name: "Flowdesk",
+//     url: "http://about.me",
+//   },
+//   {
+//     name: "Tres-Zap",
+//     url: "https://nba.com",
+//   },
+//   {
+//     name: "Zoolab",
+//     url: "http://yandex.ru",
+//   },
+//   {
+//     name: "Subin",
+//     url: "https://apache.org",
+//   },
+//   {
+//     name: "Greenlam",
+//     url: "http://columbia.edu",
+//   },
+//   {
+//     name: "Bigtax",
+//     url: "http://nih.gov",
+//   },
+// ];
+
+// const optionsEL = document.querySelector(".options");
+// options.forEach((i) => {
+//   let option = document.createElement("a");
+//   option.classList.add(
+//     "option",
+//     "h-12",
+//     "bg-gray-700",
+//     "text-white",
+//     "block",
+//     "border-b",
+//     "border-gray-600",
+//     "flex",
+//     "items-center",
+//     "px-4"
+//   );
+//   option.innerHTML = i.name;
+//   option.setAttribute("href", i.url);
+//   optionsEL.appendChild(option);
+// });
+// //search bar data
+// //search function
+// const optionsEls = document.querySelectorAll(".option");
+//       const searchEl = document.querySelector(".search");
+
+//       const search = () =>
+//         optionsEls.forEach(
+//           (e) =>
+//             (e.style.display =
+//               e.innerHTML.toUpperCase().indexOf(searchEl.value.toUpperCase()) >
+//               -1
+//                 ? ""
+//                 : "none")
+//         );
+// //search function
+//search bar
+
+let navbar = document.querySelector('.navbar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    navbar.classList.toggle('active');
+    searchForm.classList.remove('active');
+}
+
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+    searchForm.classList.remove('active');
+}
+
+var swiper = new Swiper(".home-slider", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+      clickable:true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    loop:true,
+  });
+var swiper = new Swiper(".home-products-slider", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 20,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          
+        },
+        768: {
+          slidesPerView: 2,
+          
+        },
+        991: {
+          slidesPerView: 3,
+          
+        },
+      },
+  });
+
+//   function body1(){
+//     document.querySelector('.body').style.display = 'none';
+//   }
+//   function fadeOutBody(){
+//     setInterval(body,0);
+//   }
+  
+//   window.onload = fadeOutBody;
+
+// function body2(){
+//   document.querySelector('.body').style.display = 'visible';
+// }
+// function fadeInBody(){
+//   setInterval(body2,3000);
+// }
+
+// window.onload = fadeInBody;
+function scrollToTop(){
+  window.scrollTo(0, 0);
+}
+
+  function loader(){
+    document.querySelector('.loader').style.display = 'none';
+
+  }
+
+  function fadeOut(){
+    setInterval(loader,3000);
+  }
+
+  window.onload = fadeOut;
+    </script>
+    <!-- *******************CUSTOM JS FILE******************** -->
+</body>
+</html>

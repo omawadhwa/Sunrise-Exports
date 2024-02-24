@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunrise Exports</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- swiper css link -->
+
+    <link rel="stylesheet" href="biscuits.css">
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script>
+        jQuery(function($){
+            var $navbar = $('.header');
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if( $current > 0 ){
+                    $navbar.addClass('navbar-color');
+                }
+                else{
+                    $navbar.removeClass('navbar-color');
+                }
+            });
+        });
+    </script>
+    <!-- JQuery CDN -->
+
+</head>
+<body class="body">
+    <div onclick="scrollToTop()" class="bttb">
+        <img src="./img/icons8-down-button-100.png" alt="">
+    </div>
+    <!-- ***************HEADER SECTION STARTS*************** -->
+    <header class="header">
+
+        <a href="#" class="logo"></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="aboutus.html">about us</a>
+            <a href="ballpens.html">ball pens</a>
+            <a href="minerals.html">minerals</a>
+            <a href="safetymatches.html">safety matches</a>
+            <a href="biscuits.html">biscuits</a>
+            <a href="wickstoves.html">wick stoves</a>
+            <a href="holograms.html">hologram stickers</a>
+            <a href="contactus.html">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <!-- <div class="fas fa-search" id="search-btn"></div> -->
+        </div>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+    <!-- ***************HEADER SECTION ENDS*************** -->
+
+    <section class="biscuits">
+        <h1>Biscuits</h1>
+        <div class="bisc">
+            <h2>Glucose Biscuits</h2>
+            <img src="./img/Biscuits/Picture1.jpg" alt="">
+            <img src="./img/Biscuits/Picture2.jpg" alt="">
+            <img src="./img/Biscuits/Picture3.jpg" alt="">
+        </div>
+        <div class="bisc">
+            <h2>Cream Biscuits</h2>
+            <img src="./img/Biscuits/Picture4.jpg" alt="">
+            <img src="./img/Biscuits/Picture5.jpg" alt="">
+            <img src="./img/Biscuits/Picture6.jpg" alt="">
+            <img src="./img/Biscuits/Picture7.jpg" alt="">
+        </div>
+        <div class="bisc">
+            <h2>Nice Biscuits</h2>
+            <img src="./img/Biscuits/Picture8.jpg" alt="">
+        </div>
+    </section>
+
+
+    <!-- ***************FOOTER SECTION STARTS*************** -->
+    <section class="footer">
+        <h1>Contact Us</h1>
+        <div class="info">
+             <div class="information">
+               <img src="img/location.png" class="icon" alt="" />
+               <p>F-14, HI LIFE MALL, SANTACRUZ (WEST) <br> MUMBAI (400 054), INDIA</p>
+             </div>
+             <div class="information">
+               <img src="img/email.png" class="icon" alt="" />
+               <p style="text-transform: none;">info@sunriseexports.biz</p>
+             </div>
+             <div class="information">
+               <img src="img/phone-call.png" class="icon" alt="" />
+               <p>+91 9819201633<br>+91 9819163180</p>
+             </div>
+             <div class="information">
+                 <div class="btn">
+                     <a href="contactus.html">
+                         Get A Quote
+                     </a>
+                 </div>
+             </div>
+           </div>
+     </section>
+     <!-- ***************FOOTER SECTION ENDS*************** -->
+
+    <!-- <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/MEiZ5h8lOkM7rwideE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/looping-infinite-loop-cmdrkitten-MEiZ5h8lOkM7rwideE">via GIPHY</a></p> -->
+    <div class="loader">
+        <img src="./gif/1490.gif" alt="">
+    </div>
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <!-- swiper js link -->
+
+
+
+    <!-- *******************CUSTOM JS FILE******************** -->
+    <script src="biscuits.js"></script>
+    <!-- *******************CUSTOM JS FILE******************** -->
+</body>

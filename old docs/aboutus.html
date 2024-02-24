@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us-Sunrise Exports</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- swiper css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- swiper css link -->
+
+    <link rel="stylesheet" href="aboutus.css">
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+
+    <script>
+        jQuery(function($){
+            var $navbar = $('.header');
+            $(window).scroll(function(event){
+                var $current = $(this).scrollTop();
+                if( $current > 0 ){
+                    $navbar.addClass('navbar-color');
+                }
+                else{
+                    $navbar.removeClass('navbar-color');
+                }
+            });
+        });
+    </script>
+    <!-- JQuery CDN -->
+</head>
+<body class="body">
+    <div onclick="scrollToTop()" class="bttb">
+        <img src="./img/icons8-down-button-100.png" alt="">
+    </div>
+    <!-- ***************HEADER SECTION STARTS*************** -->
+    <header class="header" id="header">
+
+        <a href="#" class="logo"></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="aboutus.html">about us</a>
+            <a href="ballpens.html">ball pens</a>
+            <a href="minerals.html">minerals</a>
+            <a href="safetymatches.html">safety matches</a>
+            <a href="biscuits.html">biscuits</a>
+            <a href="wickstoves.html">wick stoves</a>
+            <a href="holograms.html">hologram stickers</a>
+            <a href="contactus.html">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <!-- <div class="fas fa-search" id="search-btn"></div> -->
+        </div>
+
+        <!-- <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here">
+            <label for="search-box" class="fas fa-search"></label>
+        </form> -->
+
+    </header>
+
+    <section class="about-top">
+        <h1>About Us</h1>
+        <div class="top-row">
+            
+            <div class="top-image">
+                
+                <img src="./img/Picture1.jpg" alt="">
+            </div>
+            <div class="top-content">
+                <h3>We have more than <strong style="color: black;"> 20 years </strong>of experience
+                    in Making Products</h3>
+                    <p>Incorporated in 2000 by Mr. Kishore Chandni, Sunrise Exports is one of the leading manufacturer exporters and suppliers of all types of Ball pens, Direct fill pens , Fine tip pens, Designer pens, Gel pens, Hologram Stickers, all types of Kerosene wick stoves, mining products like Talc power/Soapstone powder, Dolomite powder, Calcite powder, China clay powder, Quartz silica powder, all types of matchboxes like Cardboard Matchbox , Wax Matchbox, Kitchen Matchbox.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="row">
+            <div class="image">
+                <img src="./img/IMG-20220716-WA0013.jpg" alt="">
+                <h1 style="font-size: 2rem; font-weight: lighter;"><strong>Mr. Kishore Chandni</strong><br>( Founder & CEO - Sunrise Exports & Sneras International )</h1>
+            </div>
+            <div class="content">
+                <!-- <span>About Us</span> -->
+                <h3>We are committed to offer quality proven product range which is ensured by a high level of stability in our quality control processes. We procure our raw materials from the leading vendors in the market, which undergoes stringent quality analysis. Equipped with robust infrastructural facilities and skilled manpower, we have a niche for ourselves in the national and international market.</h3>
+
+                    <p>Our progressive organization is the result of our goodwill that we gained by providing finest quality products. Empowered with our own manufacturing facilities and team of experts, we work diligently to gain customer satisfaction. Our products have acquired a strong hold in the  International market. Moreover, our commitment for excellence has taken us many miles ahead of our competitors.</p>
+            </div>
+                
+        </div>
+    </section>
+
+    <section class="about-bottom">
+        <div class="bottom-row">
+            <div class="bottom-image">
+                <img src="./img/certificate.jpg" alt="">
+            </div>
+            <div class="bottom-content">
+                <h3>We are registered members of the federation of Indian export organization, Govt of India.</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- ***************FOOTER SECTION STARTS*************** -->
+    <section class="footer">
+        <h1>Contact Us</h1>
+        <div class="info">
+             <div class="information">
+               <img src="img/location.png" class="icon" alt="" />
+               <p>F-14, HI LIFE MALL, SANTACRUZ (WEST) <br> MUMBAI (400 054), INDIA</p>
+             </div>
+             <div class="information">
+               <img src="img/email.png" class="icon" alt="" />
+               <p style="text-transform: none;">info@sunriseexports.biz</p>
+             </div>
+             <div class="information">
+               <img src="img/phone-call.png" class="icon" alt="" />
+               <p>+91 9819201633<br>+91 9819163180</p>
+             </div>
+             <div class="information">
+                 <div class="btn">
+                     <a href="contactus.html">
+                         Get A Quote
+                     </a>
+                 </div>
+             </div>
+           </div>
+     </section>
+     <!-- ***************FOOTER SECTION ENDS*************** -->
+
+    <div class="loader">
+        <img src="./gif/1490.gif" alt="">
+    </div>
+
+    <!-- *******************CUSTOM JS FILE******************** -->
+    <script src="aboutus.js"></script>
+    <!-- *******************CUSTOM JS FILE******************** -->
+</body>
+</html>
